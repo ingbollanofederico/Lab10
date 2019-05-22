@@ -1,6 +1,6 @@
 package it.polito.tdp.porto.model;
 
-public class Author {
+public class Author implements Comparable<Author>{
 
 	private int id;
 	private String lastname;
@@ -44,7 +44,7 @@ public class Author {
 
 	@Override
 	public String toString() {
-		return "Author [id=" + id + ", lastname=" + lastname + ", firstname=" + firstname + "]";
+		return lastname + " " + firstname;
 	}
 
 	@Override
@@ -67,6 +67,16 @@ public class Author {
 		if (id != other.id)
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Author arg0) {
+		if(this.lastname.compareTo(arg0.getLastname())!=0) {
+			return this.lastname.compareTo(arg0.getLastname());
+		}else {
+			return this.firstname.compareTo(arg0.getFirstname());
+		}
+		
 	}
 	
 	
