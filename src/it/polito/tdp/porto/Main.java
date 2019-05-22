@@ -16,6 +16,7 @@ public class Main extends Application {
 			PortoController controller = loader.getController();
 
 			// set the model
+			//OK
 			
 			Scene scene = new Scene(root);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
